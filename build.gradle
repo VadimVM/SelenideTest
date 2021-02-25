@@ -15,5 +15,13 @@ dependencies {
 }
 
 test {
-    useTestNG()
+    testLogging.showStandardStreams = true
+    options {
+        systemProperties(System.getProperties())
+    }
+
+    String nameSuite = System.getProperty("suite", "smoke")
+    useTestNG(){
+        suites 'src/test/resources/test_suite/' + nameSuite + '.xml'
+    }
 }

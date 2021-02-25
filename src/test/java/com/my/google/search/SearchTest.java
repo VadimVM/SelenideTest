@@ -1,3 +1,5 @@
+package com.my.google.search;
+
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
@@ -10,11 +12,13 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SearchTest {
     private GoogleAction googleAction;
+    private GooglePage page;
 
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         googleAction = new GoogleAction();
+        page = new GooglePage();
     }
 
     @BeforeMethod
@@ -30,18 +34,18 @@ public class SearchTest {
     @Test
     public void searchShouldHaveText() {
         googleAction.searchText("gradle");
-        new GooglePage().getResSearch().shouldHave(Condition.text("Gradle Build"));
+        page.getResSearch().shouldHave(Condition.text("Gradle Build"));
     }
 
     @Test
     public void firstLinkShouldHaveText() {
         googleAction.searchText("gradle");
-        new GooglePage().getResSearchByCSS(0).shouldHave(Condition.text("Gradle Build"));
+        page.getResSearchByCSS(0).shouldHave(Condition.text("Gradle Build"));
     }
 
     @Test
     public void countLinksByxPaTh() {
         googleAction.searchText("gradle");
-        new GooglePage().getRes().shouldHave(CollectionCondition.size(14));
+        page.getRes().shouldHave(CollectionCondition.size(14));
     }
 }

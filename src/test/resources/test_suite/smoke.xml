@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SMOKE">
+    <test name="Smoke Google Test">
+        <classes>
+            <class name="com.my.google.search.SearchTest"/>
+        </classes>
+    </test>
+</suite>
