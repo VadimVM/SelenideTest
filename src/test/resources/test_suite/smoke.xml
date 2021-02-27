@@ -4,7 +4,7 @@
 <suite name="SMOKE">
     <test name="Smoke Google Test">
         <classes>
-            <class name="com.my.google.search.SearchTest"/>
+            <class name="com.my.tests.google.search.SearchTest"/>
         </classes>
     </test>
 </suite>
