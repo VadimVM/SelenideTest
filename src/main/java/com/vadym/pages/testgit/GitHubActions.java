@@ -13,7 +13,7 @@ public class GitHubActions {
     public void loginToAccount(){
         doToSingInPage();
         gitPage.getLogin().val("vadimvm11@gmail.com");
-        gitPage.getPassword().val("xxxxxxxxxxxx").pressEnter(); // пароль в личку, если что, напишу.
+        gitPage.getPassword().val("xxxxxxxxxxx").pressEnter(); // пароль в личку, если что, напишу.
     }
 
     public void getSummaryOfProfile(){
