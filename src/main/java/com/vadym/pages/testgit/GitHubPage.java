@@ -32,7 +32,7 @@ public class GitHubPage {
     }
 
     public SelenideElement getReposSelenideTest() {
-        return $x("//div//a[@href='/VadimVM/Selenidtest']");
+        return $x("//div//a[@href='/VadimVM/SelenideTest']");
     }
 
     public SelenideElement findGitignore() {
