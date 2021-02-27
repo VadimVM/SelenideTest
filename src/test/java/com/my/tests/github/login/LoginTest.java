@@ -36,7 +36,7 @@ public class LoginTest {
 
 
     @Test
-    public void shouldGoToLoginPage(){
+    public void userSingIn(){
         actions.doToSingInPage();
         page.getFormSession().shouldHave(Condition.text("Username or email address"));
     }
