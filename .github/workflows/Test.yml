@@ -1,0 +1,16 @@
+  name: Smoke-Test
+
+  on:
+    push:
+      branches:
+        -master # какую ветку?
+
+
+  jobs:
+
+    smoke_testing_Googlr:
+      runs-on: windows-2019
+
+      steps:
+        - name: Smoke test Google
+          run: gradlew test -Dsuite=smoke
