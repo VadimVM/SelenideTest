@@ -10,3 +10,11 @@ on:
     branches: [ master ]
 
 jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-google
+      - run: gradlew test -Dsuit=smoke
+
+
+
