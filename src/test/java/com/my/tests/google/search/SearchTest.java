@@ -2,7 +2,9 @@ package com.my.tests.google.search;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import com.vadym.pages.RemoteWebDriverProvider;
 import com.vadym.pages.testgoole.GoogleAction;
 import com.vadym.pages.testgoole.GooglePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -14,9 +16,12 @@ public class SearchTest {
     private GoogleAction googleAction;
     private GooglePage page;
 
+
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
+        Configuration.remote = " src/main/java/com/vadym/pages/RemoteWebDriverProvider";
+        Configuration.browser = "chrome";
         googleAction = new GoogleAction();
         page = new GooglePage();
     }
