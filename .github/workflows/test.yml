@@ -28,4 +28,3 @@ jobs:
       run: chmod +x gradlew
     - name: Test with Gradle
       run: ./gradlew test -Dsiute=smoke
-    - uses: actions/upload-artifact@v2
