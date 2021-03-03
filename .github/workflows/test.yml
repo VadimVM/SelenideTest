@@ -20,6 +20,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 15.0.2
+    - name: Start Seleniod
+      uses: Xotabu4/selenoid-github-action@v1
     - name: Install Chrome
       run: |
         chmod +x ./scripts/InstallChrome.sh

@@ -1,4 +1,4 @@
-package com.vadym.pages;
+package com.vadym.pages.driverManager;
 
 import com.codeborne.selenide.WebDriverProvider;
 import org.openqa.selenium.WebDriver;
@@ -7,15 +7,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import javax.annotation.Nonnull;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
 
 public class RemoteWebDriverProvider implements WebDriverProvider {
-    @Nonnull
     @Override
-    public WebDriver createDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
+    public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
 //        var experimentalOption = new HashMap<>();
 //        experimentalOption.put("download.default_directory", DOWNLOAD_FILES_FOLDER_PATH.toString());
 //        experimentalOption.put("profile.default_content_setting_values.cookies", 1);
