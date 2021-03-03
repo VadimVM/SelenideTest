@@ -48,9 +48,10 @@ public class SearchTest {
         page.getResSearchByCSS(0).shouldHave(Condition.text("Gradle Build"));
     }
 
-//    @Test
-//    public void countLinksByxPaTh() {
-//        googleAction.searchText("gradle");
+    @Test
+    public void countLinksByxPaTh() {
+        googleAction.searchText("gradle");
+        System.out.println(page.getRes().size());
 //        page.getRes().shouldHave(CollectionCondition.size(14));
-//    }
+    }
 }
