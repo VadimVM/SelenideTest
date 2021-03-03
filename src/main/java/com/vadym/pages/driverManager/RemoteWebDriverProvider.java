@@ -26,8 +26,8 @@ public class RemoteWebDriverProvider implements WebDriverProvider {
 //        options.setExperimentalOption("prefs", experimentalOption);
         RemoteWebDriver driver = null;
         try {
-            var selenoidHost = System.getenv("selenium_remote_url");
-            driver = new RemoteWebDriver(new URL(selenoidHost), options);
+//            var selenoidHost = System.getenv("selenium_remote_url");
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
             driver.setFileDetector(new LocalFileDetector());
         } catch (MalformedURLException e) {
             e.printStackTrace();
