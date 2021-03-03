@@ -12,8 +12,8 @@ public class GitHubActions {
 
     public void loginToAccount(){
         doToSingInPage();
-        gitPage.getLogin().val("vadimvm11@gmail.com");
-        gitPage.getPassword().val("___________").pressEnter();
+        gitPage.getLogin().val("VadimVM");
+        gitPage.getPassword().val(System.getenv("GitPass")).pressEnter();
     }
 
     public void getSummaryOfProfile(){

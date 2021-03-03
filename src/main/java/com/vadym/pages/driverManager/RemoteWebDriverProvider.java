@@ -21,6 +21,7 @@ public class RemoteWebDriverProvider implements WebDriverProvider {
         options.addArguments("–no-sandbox");
         RemoteWebDriver driver = null;
         try {
+
             driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), options);
             driver.setFileDetector(new LocalFileDetector());
         } catch (MalformedURLException e) {
