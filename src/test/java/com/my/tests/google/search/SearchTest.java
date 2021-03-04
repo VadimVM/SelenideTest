@@ -21,6 +21,7 @@ public class SearchTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = RemoteWebDriverProvider.class.getName();
+        Configuration.timeout = 30000;
         googleAction = new GoogleAction();
         page = new GooglePage();
     }
@@ -37,7 +38,7 @@ public class SearchTest {
 
     @Test
     public void searchShouldHaveText() {
-        googleAction.searchText("gradle");
+        googleAction.searchText(System.getProperty("g"));
         page.getResSearch().shouldHave(Condition.text("Gradle Build"));
     }
 
@@ -45,6 +46,13 @@ public class SearchTest {
     public void firstLinkShouldHaveText() {
         googleAction.searchText("gradle");
         page.getResSearchByCSS(0).shouldHave(Condition.text("Gradle Build"));
+    }
+
+    @Test
+    public void countOfLink(){
+        googleAction.searchText("gradle");
+        page.getRes().shouldHave(CollectionCondition.size(10));
+
     }
 
 }

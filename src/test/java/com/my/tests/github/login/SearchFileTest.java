@@ -22,6 +22,7 @@ public class SearchFileTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = RemoteWebDriverProvider.class.getName();
+        Configuration.timeout = 30000;
         actions = new GitHubActions();
         page = new GitHubPage();
     }
