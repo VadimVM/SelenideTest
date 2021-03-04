@@ -13,7 +13,7 @@ public class GitHubActions {
     public void loginToAccount(){
         doToSingInPage();
         gitPage.getLogin().val("VadimVM");
-        gitPage.getPassword().val(System.getenv("GitPass")).pressEnter();
+        gitPage.getPassword().val(System.getenv("GitPassword")).pressEnter();
     }
 
     public void getSummaryOfProfile(){
