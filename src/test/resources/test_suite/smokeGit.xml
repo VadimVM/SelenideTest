@@ -4,8 +4,8 @@
 <suite name="SMOKE">
     <test name="Smoke GitHub Test">
         <classes>
-          <!--  <class name="com.my.tests.github.login.LoginTest"></class> !-->
-            <class name="com.my.tests.github.login.SearchFileTest"></class>
+            <class name="com.my.tests.github.login.LoginTest"></class>
+          <!--  <class name="com.my.tests.github.login.SearchFileTest"></class> !-->
         </classes>
     </test>
 </suite>

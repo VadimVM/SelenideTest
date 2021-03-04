@@ -22,7 +22,6 @@ public class LoginTest {
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        Configuration.driverManagerEnabled = false;
         Configuration.browser = RemoteWebDriverProvider.class.getName();
         actions = new GitHubActions();
         page = new GitHubPage();
@@ -43,12 +42,13 @@ public class LoginTest {
     public void userSingIn(){
         actions.doToSingInPage();
         page.getFormSession().shouldHave(Condition.text("Username or email address"));
+        page.getLogin();
+        page.getPassword();
     }
 
     @Test
     public void userLoginToAccount(){
         actions.loginToAccount();
-        page.getViewProfile().shouldHave(Condition.attribute("role", "button"));
     }
 
     @Test
