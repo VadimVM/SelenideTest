@@ -25,7 +25,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Test with Gradle
-      run: ./gradlew test -Dsuite=smokeGit -DGitPassword=${{ secrets.GITPASSWORD }}
+      run: ./gradlew test -Dsuite=smokeGit -DgitPassword=${{ secrets.GITPASSWORD }}
 
 
 
