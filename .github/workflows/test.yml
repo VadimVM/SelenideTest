@@ -13,8 +13,6 @@ jobs:
   build:
 
     runs-on: ubuntu-20.04
-    env:
-      GitPassword: ${{ secrets.GitPassword }}
 
     steps:
     - uses: actions/checkout@v2
@@ -28,6 +26,11 @@ jobs:
       run: chmod +x gradlew
     - name: Test with Gradle
       run: ./gradlew test -Dsuite=smokeGit -DGitPassword=${{ secrets.GitPassword }}
+      with:
+        GitPassword: ${{ secrets.GitPassword }}
+      env:
+        GitPassword: ${{ secrets.GitPassword }}
+
 
 
 
