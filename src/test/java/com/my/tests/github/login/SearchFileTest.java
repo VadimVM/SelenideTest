@@ -21,7 +21,6 @@ public class SearchFileTest {
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        Configuration.driverManagerEnabled = false;
         Configuration.browser = RemoteWebDriverProvider.class.getName();
         actions = new GitHubActions();
         page = new GitHubPage();
@@ -36,6 +35,7 @@ public class SearchFileTest {
     public void tearDown() {
         WebDriverRunner.closeWebDriver();
     }
+
     @Test
     public void userSelectRepository(){
         actions.goToSelenideTest();
