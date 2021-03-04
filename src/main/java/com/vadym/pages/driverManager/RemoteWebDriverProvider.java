@@ -15,10 +15,14 @@ public class RemoteWebDriverProvider implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--disable-web-security");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("–no-sandbox");
+        options.addArguments("--headless", "--disable-gpu",
+                "--window-size=1920,1200","--ignore-certificate-errors",
+                "--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+//        options.addArguments("--headless");
+//        options.addArguments("--start-maximized");
+//        options.addArguments("--disable-web-security");
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("–no-sandbox");
         RemoteWebDriver driver = null;
         try {
 
