@@ -20,7 +20,6 @@ public class SearchTest {
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        Configuration.driverManagerEnabled = false;
         Configuration.browser = RemoteWebDriverProvider.class.getName();
         googleAction = new GoogleAction();
         page = new GooglePage();
@@ -48,9 +47,4 @@ public class SearchTest {
         page.getResSearchByCSS(0).shouldHave(Condition.text("Gradle Build"));
     }
 
-    @Test
-    public void countLinksByxPaTh() {
-        googleAction.searchText("gradle");
-        page.getRes().shouldHave(CollectionCondition.size(10));
-    }
 }
