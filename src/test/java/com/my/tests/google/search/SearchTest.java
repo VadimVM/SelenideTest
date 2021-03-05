@@ -46,13 +46,7 @@ public class SearchTest {
     public void firstLinkShouldHaveText() {
         googleAction.searchText("gradle");
         page.getResSearchByCSS(0).shouldHave(Condition.text("Gradle Build"));
-    }
-
-    @Test
-    public void countOfLink(){
-        googleAction.searchText("gradle");
-        page.getRes().shouldHave(CollectionCondition.size(10));
-
+        System.out.println(page.getRes());
     }
 
 }
