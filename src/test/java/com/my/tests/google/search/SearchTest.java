@@ -2,12 +2,10 @@ package com.my.tests.google.search;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import com.vadym.pages.driverManager.CreateWebDriver;
 import com.vadym.pages.testgoole.GoogleAction;
 import com.vadym.pages.testgoole.GooglePage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.*;
 
 import static com.codeborne.selenide.Selenide.*;
