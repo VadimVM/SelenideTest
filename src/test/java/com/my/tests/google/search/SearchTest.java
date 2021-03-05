@@ -20,7 +20,7 @@ public class SearchTest {
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        Configuration.browser = RemoteWebDriverProvider.class.getName();
+        Configuration.browser = "src/main/java/com/vadym/pages/driverManager/RemoteWebDriverProvider.java";
         Configuration.timeout = 30000;
         googleAction = new GoogleAction();
         page = new GooglePage();
