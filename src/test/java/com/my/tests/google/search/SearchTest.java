@@ -1,10 +1,8 @@
 package com.my.tests.google.search;
 
-import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
-import com.vadym.pages.driverManager.RemoteWebDriverProvider;
 import com.vadym.pages.testgoole.GoogleAction;
 import com.vadym.pages.testgoole.GooglePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -20,7 +18,7 @@ public class SearchTest {
     @BeforeTest
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        Configuration.browser = "com.vadym.pages.driverManager.RemoteWebDriverProvider";
+        Configuration.browser = String.format("com.vadym.pages.driverManager.%s", System.getProperty("remote", "WebDriver"));
         Configuration.timeout = 30000;
         googleAction = new GoogleAction();
         page = new GooglePage();
@@ -46,7 +44,6 @@ public class SearchTest {
     public void firstLinkShouldHaveText() {
         googleAction.searchText("gradle");
         page.getResSearchByCSS(0).shouldHave(Condition.text("Gradle Build"));
-        System.out.println(page.getRes());
     }
 
 }
