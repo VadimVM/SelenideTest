@@ -25,7 +25,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Test with Gradle
-      run: ./gradlew test -Dsuite=smoke -Dremote=RemoteWebDriverProvider
+      run: ./gradlew test -Dsuite=smokeRG -Dremote=RemoteWebDriverProvider -Dpassword=${{ secrets.PASSWORD }}
 
 
 
