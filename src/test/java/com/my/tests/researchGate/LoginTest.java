@@ -39,8 +39,9 @@ public class LoginTest {
     public void searchShouldHaveText() {
         action.goToLoginPage();
     }
+
     @Test
-    public void userSeeHomePage(){
+    public void userSeeHomePage() {
         action.userLoginToRG();
         page.getHeader().shouldBe(Condition.visible);
         page.getAvatarUser().shouldBe(Condition.visible);

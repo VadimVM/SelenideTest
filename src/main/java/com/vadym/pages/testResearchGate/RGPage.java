@@ -6,7 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RGPage {
-    public SelenideElement getLoginPage(){
+    public SelenideElement getLoginPage() {
         return $x("//a[text()='Log in']");
     }
 
@@ -18,17 +18,19 @@ public class RGPage {
         return $("input#input-password");
     }
 
-    public SelenideElement getHeader(){
+    public SelenideElement getHeader() {
         return $("nav[aria-label='Main']");
     }
-    public SelenideElement getAvatarUser(){
+
+    public SelenideElement getAvatarUser() {
         return $("img[alt='Vadim']");
     }
 
-    public SelenideElement getUserName(){
+    public SelenideElement getUserName() {
         return $x("//div[text()='Vadim Mikhailenko']");
     }
-    public ElementsCollection getListOfPublication(){
+
+    public ElementsCollection getListOfPublication() {
         return $$("div.profile-highlights__item");
     }
 }

@@ -36,13 +36,13 @@ public class ProfileTest {
 
 
     @Test
-    public void getUserProfile(){
+    public void getUserProfile() {
         action.UserProfile();
         page.getUserName().shouldBe(Condition.visible);
     }
 
     @Test
-    public void countOfPublications(){
+    public void countOfPublications() {
         action.UserProfile();
         page.getListOfPublication().shouldHave(CollectionCondition.size(5));
     }
