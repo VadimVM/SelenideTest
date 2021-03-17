@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SMOKEMAIL">
+    <test name="Smoke Research Gate Test">
+        <classes>
+            <class name="com.my.tests.researchGate.LoginTest"/>
+            <class name="com.my.tests.researchGate.ProfileTest"/>
+        </classes>
+    </test>
+</suite>
