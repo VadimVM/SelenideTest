@@ -30,6 +30,10 @@ public class RGPage {
         return $x("//div[text()='Vadim Mikhailenko']");
     }
 
+    public SelenideElement getUserJob(){
+        return $x("//div[text()='State Scientific Institution Institute for Single Crystal, Ukraine, Kharkiv']");
+    }
+
     public ElementsCollection getListOfPublication() {
         return $$("div.profile-highlights__item");
     }

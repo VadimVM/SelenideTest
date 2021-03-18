@@ -38,6 +38,7 @@ public class ProfileTest {
     @Test
     public void getUserProfile() {
         action.UserProfile();
+        page.getUserJob().shouldBe(Condition.visible);
         page.getUserName().shouldBe(Condition.visible);
     }
 
