@@ -4,6 +4,7 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import com.vadym.pages.annotations.TestId;
 import com.vadym.pages.driverManager.RemoteWebDriverProvider;
 import com.vadym.pages.testgit.GitHubActions;
 import com.vadym.pages.testgit.GitHubPage;
@@ -38,7 +39,8 @@ public class LoginTest {
     }
 
 
-    @Test
+    @TestId(number = "RG-L-1")
+    @Test(description = "System should have authorization for users")
     public void userSingIn(){
         actions.doToSingInPage();
         page.getFormSession().shouldHave(Condition.text("Username or email address"));
@@ -46,12 +48,14 @@ public class LoginTest {
         page.getPassword();
     }
 
-    @Test
+    @TestId(number = "RG-L-2")
+    @Test(description = "System provide an ability for users to log in")
     public void userLoginToAccount(){
         actions.loginToAccount();
     }
 
-    @Test
+    @TestId(number = "RG-L-3")
+    @Test(description = "User can see his profile and list of publications")
     public void userClickToAvatar(){
         actions.getSummaryOfProfile();
         page.listMenuItem().shouldHave(CollectionCondition.size(5));
