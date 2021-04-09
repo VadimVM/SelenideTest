@@ -2,6 +2,7 @@ package com.my.tests.researchGate;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
+import com.vadym.pages.annotations.TestId;
 import com.vadym.pages.driverManager.CreateWebDriver;
 import com.vadym.pages.testResearchGate.RGAction;
 import com.vadym.pages.testResearchGate.RGPage;
@@ -40,7 +41,8 @@ public class LoginTest {
         action.goToLoginPage();
     }
 
-    @Test
+    @TestId(number = "RG-L-1")
+    @Test(description = "System provide an ability for authorized Users Log In")
     public void userSeeHomePage() {
         action.userLoginToRG();
         page.getHeader().shouldBe(Condition.visible);

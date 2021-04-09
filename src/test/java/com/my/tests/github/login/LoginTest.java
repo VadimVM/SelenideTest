@@ -39,8 +39,8 @@ public class LoginTest {
     }
 
 
-    @TestId(number = "RG-L-1")
-    @Test(description = "System should have authorization for users")
+
+    @Test
     public void userSingIn(){
         actions.doToSingInPage();
         page.getFormSession().shouldHave(Condition.text("Username or email address"));
@@ -48,14 +48,12 @@ public class LoginTest {
         page.getPassword();
     }
 
-    @TestId(number = "RG-L-2")
-    @Test(description = "System provide an ability for users to log in")
+    @Test
     public void userLoginToAccount(){
         actions.loginToAccount();
     }
 
-    @TestId(number = "RG-L-3")
-    @Test(description = "User can see his profile and list of publications")
+    @Test
     public void userClickToAvatar(){
         actions.getSummaryOfProfile();
         page.listMenuItem().shouldHave(CollectionCondition.size(5));

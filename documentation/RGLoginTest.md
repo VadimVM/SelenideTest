@@ -13,3 +13,10 @@ Functional requirements [KIB-02.03]
 
 ### Test Scenario Positive
 
+***RG-L-1*** System provide an ability for authorized Users Log In
+
+```gherkin
+Authorized User Log In System
+System show User Profile
+```
+
