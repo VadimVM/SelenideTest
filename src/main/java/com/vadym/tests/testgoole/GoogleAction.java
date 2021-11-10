@@ -1,4 +1,4 @@
-package com.vadym.pages.testgoole;
+package com.vadym.tests.testgoole;
 
 public class GoogleAction {
     private GooglePage page;

@@ -1,4 +1,4 @@
-package com.vadym.pages.testgit;
+package com.vadym.tests.testgit;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;

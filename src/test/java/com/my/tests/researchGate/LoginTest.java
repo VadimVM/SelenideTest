@@ -2,12 +2,10 @@ package com.my.tests.researchGate;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
-import com.vadym.pages.annotations.TestId;
-import com.vadym.pages.driverManager.CreateWebDriver;
-import com.vadym.pages.testResearchGate.RGAction;
-import com.vadym.pages.testResearchGate.RGPage;
-import com.vadym.pages.testgoole.GoogleAction;
-import com.vadym.pages.testgoole.GooglePage;
+import com.vadym.tests.annotations.TestId;
+import com.vadym.tests.driverManager.CreateWebDriver;
+import com.vadym.tests.testResearchGate.RGAction;
+import com.vadym.tests.testResearchGate.RGPage;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;

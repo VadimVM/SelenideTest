@@ -1,4 +1,4 @@
-package com.vadym.pages.annotations;
+package com.vadym.tests.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

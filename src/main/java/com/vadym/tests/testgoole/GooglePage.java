@@ -1,4 +1,4 @@
-package com.vadym.pages.testgoole;
+package com.vadym.tests.testgoole;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;

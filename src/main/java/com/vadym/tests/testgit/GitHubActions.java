@@ -1,4 +1,4 @@
-package com.vadym.pages.testgit;
+package com.vadym.tests.testgit;
 
 public class GitHubActions {
     private GitHubPage gitPage;

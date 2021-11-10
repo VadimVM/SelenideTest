@@ -1,4 +1,4 @@
-package com.vadym.pages.testResearchGate;
+package com.vadym.tests.testResearchGate;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;

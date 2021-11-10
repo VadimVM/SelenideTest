@@ -1,4 +1,4 @@
-package com.vadym.pages.driverManager;
+package com.vadym.tests.driverManager;
 
 
 import com.codeborne.selenide.WebDriverProvider;

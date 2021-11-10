@@ -1,4 +1,4 @@
-package com.vadym.pages.testResearchGate;
+package com.vadym.tests.testResearchGate;
 
 public class RGAction {
     private RGPage page;
