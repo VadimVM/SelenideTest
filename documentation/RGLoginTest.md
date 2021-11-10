@@ -2,7 +2,7 @@
 
 ### Requirements
 
-Functional requirements [KIB-02.03]
+Functional requirements [____]
 
 ###Test setup
 
@@ -13,10 +13,26 @@ Functional requirements [KIB-02.03]
 
 ### Test Scenario Positive
 
-***RG-L-1*** System provide an ability for authorized Users Log In
+**RG-L-1** System provide an ability for authorized Users Log In
 
 ```gherkin
-Authorized User Log In System
-System show User Profile
+Given Authorized User Log In System
+Then System show User Profile
+```
+
+**RG-L-2** System provide an ability for authorized Users to see his profile data
+
+```gherkin
+Given Authorized User Log In System
+When User click on 'avatar'
+Then User is able to see his name
+    And user is able to see his list of jobs
+```
+**RG-L-3** System provide an ability for authorized Users to see his publication
+
+```gherkin
+Given Authorized User Log In System
+When User click on 'avatar'
+Then User is able to see his publications
 ```
 

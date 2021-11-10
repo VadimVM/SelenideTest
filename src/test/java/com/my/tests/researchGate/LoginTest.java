@@ -25,14 +25,15 @@ public class LoginTest {
     }
 
     @BeforeMethod
-    public void openGoogle() {
+    public void openRG() {
         open("https://www.researchgate.net");
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         WebDriverRunner.closeWebDriver();
     }
+
 
     @Test
     public void searchShouldHaveText() {

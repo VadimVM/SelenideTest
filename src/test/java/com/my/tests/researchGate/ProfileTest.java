@@ -3,6 +3,7 @@ package com.my.tests.researchGate;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
+import com.vadym.tests.annotations.TestId;
 import com.vadym.tests.driverManager.CreateWebDriver;
 import com.vadym.tests.testResearchGate.RGAction;
 import com.vadym.tests.testResearchGate.RGPage;
@@ -25,26 +26,28 @@ public class ProfileTest {
     }
 
     @BeforeMethod
-    public void openGoogle() {
+    public void openRG() {
         open("https://www.researchgate.net");
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         WebDriverRunner.closeWebDriver();
     }
 
 
-    @Test
+    @TestId(number = "RG-L-2")
+    @Test(description = "System provide an ability for authorized Users to see his profile data")
     public void getUserProfile() {
-        action.UserProfile();
+        action.getUserProfile();
         page.getUserJob().shouldBe(Condition.visible);
         page.getUserName().shouldBe(Condition.visible);
     }
 
-    @Test
+    @TestId(number = "RG-L-3")
+    @Test(description = "")
     public void countOfPublications() {
-        action.UserProfile();
+        action.getUserProfile();
         page.getListOfPublication().shouldHave(CollectionCondition.size(5));
     }
 }

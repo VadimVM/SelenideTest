@@ -1,5 +1,9 @@
 package com.vadym.tests.testResearchGate;
 
+import com.codeborne.selenide.Condition;
+
+import static com.codeborne.selenide.Condition.*;
+
 public class RGAction {
     private RGPage page;
 
@@ -17,9 +21,9 @@ public class RGAction {
         page.getInputPassword().val(System.getProperty("password")).pressEnter();
     }
 
-    public void UserProfile() {
+    public void getUserProfile() {
         userLoginToRG();
-        page.getAvatarUser().click();
+        page.getAvatarUser().shouldBe(visible, enabled).click();
     }
 
 }
