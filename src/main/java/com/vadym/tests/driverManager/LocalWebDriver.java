@@ -17,7 +17,6 @@ public class LocalWebDriver implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
         options.addArguments("--start-maximized");
         options.addArguments("--disable-web-security");
         options.addArguments("--disable-dev-shm-usage");
