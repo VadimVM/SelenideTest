@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="SmokeRG">
-    <test name="Smoke Research Gate Test">
+    <test name="LoginTest">
         <classes>
             <class name="com.my.tests.researchGate.LoginTest"/>
         </classes>
