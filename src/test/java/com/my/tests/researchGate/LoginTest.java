@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class LoginTest {
     private RGPage page;
@@ -37,7 +38,8 @@ public class LoginTest {
 
     @Test
     public void searchShouldHaveText() {
-        action.goToLoginPage();
+        action.userLoginToRG();
+        sleep(2000);
     }
 
     @TestId(number = "RG-L-1")

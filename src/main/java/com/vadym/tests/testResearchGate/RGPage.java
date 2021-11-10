@@ -11,11 +11,11 @@ public class RGPage {
     }
 
     public SelenideElement getInputLogin() {
-        return $("input#input-login");
+        return $("#input-login");
     }
 
     public SelenideElement getInputPassword() {
-        return $("input#input-password");
+        return $("#input-password");
     }
 
     public SelenideElement getHeader() {
