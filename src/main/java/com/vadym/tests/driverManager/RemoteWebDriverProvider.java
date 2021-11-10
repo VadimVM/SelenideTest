@@ -15,7 +15,6 @@ public class RemoteWebDriverProvider implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
         options.addArguments("--start-maximized");
         options.addArguments("--disable-web-security");
         options.addArguments("--disable-dev-shm-usage");
